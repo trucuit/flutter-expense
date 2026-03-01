@@ -1,62 +1,64 @@
-![Nylo Banner](https://nylo.dev/images/nylo_logo_header.png)
+# Flutter Expense
 
-<p align="center">
-  <a href="https://github.com/nylo-core/nylo/releases"><img src="https://img.shields.io/github/v/release/nylo-core/nylo?style=plastic" alt="Latest Release Version"></a>
-  <a href="https://github.com/nylo-core/nylo/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/nylo-core/nylo?style=plastic"></a>
-  <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
-</p>
+Ứng dụng quản lý chi tiêu cá nhân, xây dựng bằng Flutter với framework Nylo.
 
-## Nylo
+## 📋 Tính năng
 
-Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
+- Theo dõi thu chi hàng ngày
+- Phân loại chi tiêu theo danh mục
+- Giao diện Material Design (Light/Dark theme)
+- Đa ngôn ngữ (i18n)
+- Kiến trúc MVC với Nylo framework
 
-This project is open source and MIT-licenced, we welcome any contributions. You can join as a backer/sponsor to fund future development for this project [here](https://nylo.dev)
+## 🛠️ Công nghệ
 
----
+- **Framework:** Flutter + [Nylo](https://nylo.dev)
+- **Language:** Dart
+- **Architecture:** MVC (Nylo pattern)
 
-## Features
-Some core features available
-* [Routing](https://nylo.dev/docs/5.20.0/router).
-* [Themes and styling](https://nylo.dev/docs/5.20.0/themes-and-styling).
-* [Localization](https://nylo.dev/docs/5.20.0/localization).
-* [CLI for generating project files](https://nylo.dev/docs/5.20.0/metro).
-* [Elegant API Services for Networking](https://nylo.dev/docs/5.20.0/networking).
-* [Creating App Icons](https://nylo.dev/docs/5.20.0/app-icons).
-* [Project Configuration](https://nylo.dev/docs/5.20.0/configuration).
-* [Streamlined Project Structure](https://nylo.dev/docs/5.20.0/directory-structure).
+## ⚙️ Cài đặt
 
-## Requirements
-* Dart >= 3.1.3
+### 1. Clone repository
 
-## Getting Started
-
-``` bash
-git clone https://github.com/nylo-core/nylo.git
+```bash
+git clone https://github.com/trucuit/flutter-expense.git
+cd flutter-expense
 ```
 
-## Documentation
-View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
+### 2. Cấu hình Environment
 
-## Changelog
-Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/5.x/CHANGELOG.md) for more information what has changed recently.
+Copy file `.env-example` thành `.env` và cập nhật giá trị:
 
-## Social
-* [Twitter](https://twitter.com/nylo_dev)
+```bash
+cp .env-example .env
+```
 
-## Security
-If you discover any security related issues, please email support@nylo.dev instead of using the issue tracker.
+| Biến | Mô tả | Mặc định |
+|------|--------|----------|
+| `APP_NAME` | Tên ứng dụng | `Nylo` |
+| `APP_ENV` | Môi trường (`developing` / `production`) | `developing` |
+| `APP_DEBUG` | Bật/tắt debug | `true` |
+| `APP_URL` | URL ứng dụng | `https://nylo.dev` |
+| `API_BASE_URL` | Base URL của API backend | _(required)_ |
+| `TIMEZONE` | Múi giờ | `UTC` |
+| `DEFAULT_LOCALE` | Ngôn ngữ mặc định | `en` |
 
-## Contributors
-* [Anthony Gordon](https://github.com/agordn52)
-* [lpdevit](https://github.com/lpdevit)
-* [Abdulrasheed1729](https://github.com/Abdulrasheed1729)
-* [Rashid-Khabeer](https://github.com/Rashid-Khabeer)
-* [youssefKadaouiAbbassi](https://github.com/youssefKadaouiAbbassi)
-* [jeremyhalin](https://github.com/jeremyhalin)
-* [abdulawalarif](https://github.com/abdulawalarif)
-* [lepresk](https://github.com/lepresk)
-* [joshua1996](https://github.com/joshua1996)
+### 3. Cài đặt dependencies
 
-## Licence
+```bash
+flutter pub get
+```
 
-The MIT License (MIT). Please view the [License](https://github.com/nylo-core/nylo/blob/master/licence) File for more information.
+### 4. Chạy ứng dụng
+
+```bash
+flutter run
+```
+
+## 🔒 Bảo mật
+
+> **⚠️ QUAN TRỌNG:** File `.env` chứa cấu hình nhạy cảm, không commit lên Git. Chỉ commit `.env-example` làm template.
+
+## 📄 License
+
+MIT License — xem file [LICENSE](LICENSE).
